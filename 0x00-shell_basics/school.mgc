@@ -1,2 +1,2 @@
-#!/bin/bash
-grep "School" ../
+0 string SCHOOL
+!:mime School
