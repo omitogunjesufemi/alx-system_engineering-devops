@@ -1,2 +1,0 @@
-#!/bin/bash
-less /etc/ssh/sshd_config | grep -v "#"
