@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lR | grep -v / | sort | grep *.js | xargs rm 
+ls -alR | grep -v / | find -name "*.js" | sort | xargs rm 
