@@ -1,2 +1,2 @@
 #!/bin/bash
-ech0 $(( $BREATH ** $LOVE )) | cat
+printf "\n" $(( $BREATH ** $LOVE ))
