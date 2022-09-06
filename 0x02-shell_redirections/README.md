@@ -46,3 +46,11 @@
 * 21-reverse: This reverses its input.
 
 * 22-users_and_homes: This displays all users and their home directories, sorted by users based on the /etc/passwd file.
+
+* 100-empty_casks: This finds all empty files and directories in the current directory and all sub-directories.
+
+* 101-gifs: This lists all the files with a .gif extension in the current directory and all its sub directories.
+
+* 102-acrostic: This decodes acrostics that use the first letter of each line.
+
+* 103-the_biggest_fan: This parses web servers logs in TSV formats as inputs and display 11 hosts or IP addresses which did the most requests.
