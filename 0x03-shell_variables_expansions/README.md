@@ -10,3 +10,4 @@ Task | Description
 `3-paths` | This coounts the number of directories in the `PATH`.
 `4-global_variables` | This lists environment variables.
 `5-local_variables` | This lists all local variables and environment variables, and functions.
+`6-create_local_variable` | This creates a new local variable. > Name: `BEST` > Value: `School`.
