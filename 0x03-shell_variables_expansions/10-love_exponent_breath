@@ -1,2 +1,2 @@
 #!/bin/bash
-ech0 $(( $BREATH ** $LOVE )) 
+ech0 $(( $BREATH ** $LOVE )) | cat
