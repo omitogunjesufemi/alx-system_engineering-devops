@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -alR | find -name "*.gif" -printf %f\\n | sort | rev | cut -d "." -f 2- | rev 
+ls -alR | find -name "*.gif" -printf %f\\n | sort --ignore-case | rev | cut -d "." -f 2- | rev 
