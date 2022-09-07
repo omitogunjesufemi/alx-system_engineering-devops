@@ -19,3 +19,6 @@ Task | Description
 `12-combinations` | This prints all combination of two letters except `oo`.
 `13-print_float` | This prints a number with two decimal places, followed by a new line.
 `100-decimal_to_hexadecimal` | This converts a number from base 10 to base 16.
+`101-rot13` | This encodes text using ROT13 encryption.
+`102-odd` | This prints every other line from the input, starting with the first line.
+`103-water_and_stir` | This adds the two numbers stored in the environment variables `WATER` and `STIR` and prints the result.
