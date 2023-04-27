@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Bash script that displays Best School 10 times, but for the
+# 9th iteration, displays Best School and then Hi on a new line.
+
+LIMIT=1
+while [ "$LIMIT" -le "10" ]
+do
+    if [ "$LIMIT" -ne "9" ]
+    then
+	echo "Best School"
+    else
+	echo "Hi"
+    fi
+
+    (( LIMIT++ ))
+done
+exit 0
