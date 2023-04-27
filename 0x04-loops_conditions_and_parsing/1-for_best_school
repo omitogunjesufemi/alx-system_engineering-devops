@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times
+
+LIMIT=10
+
+for (( a=0; a < LIMIT; a++ ))
+do
+    echo "Best School"
+done
+exit 0
