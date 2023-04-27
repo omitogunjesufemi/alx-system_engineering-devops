@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Remove the unlucky numbers from the loop of 1 to 10
+LIMIT=10
+a=1
+while [ "$a" -le "$LIMIT" ]
+do
+    if [ $a -eq 4 ]
+    then
+	echo "bad luck"
+    elif [ $a -eq 8 ]
+    then
+	echo "good luck"
+    else
+	echo "Best School"
+    fi
+
+    (( a++ ))
+done
+exit 0
