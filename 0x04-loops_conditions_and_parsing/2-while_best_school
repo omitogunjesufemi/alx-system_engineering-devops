@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Prints "Best School" 10 times using a while loop
+
+LIMIT=10
+i=0
+while [ "$i" -lt "$LIMIT" ]
+do
+    echo "Best School"
+    (( i++ ))
+done
+exit 0
