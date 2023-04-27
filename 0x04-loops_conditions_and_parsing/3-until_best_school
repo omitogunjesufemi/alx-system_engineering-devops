@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Printing "Best School" using "until" loop
+
+LIMIT=0
+until [ "$LIMIT" -eq "10" ]
+do
+    echo "Best School"
+    (( LIMIT++ ))
+done
+exit 0
