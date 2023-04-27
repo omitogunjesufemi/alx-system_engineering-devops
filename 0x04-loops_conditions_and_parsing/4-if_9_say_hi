@@ -5,11 +5,10 @@
 LIMIT=1
 while [ "$LIMIT" -le "10" ]
 do
-    if [ "$LIMIT" -ne "9" ]
+    echo "Best School"
+    if [ "$LIMIT" -eq "9" ]
     then
-	echo "Best School"
-    else
-	echo "Hi"
+        echo "Hi"
     fi
 
     (( LIMIT++ ))
