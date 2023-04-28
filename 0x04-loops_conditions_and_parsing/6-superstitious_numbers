@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Bash script that displays numbers from 1 to 20 with branches
+# at 4, 9, 17
+LIMIT=20
+a=1
+while [ $a -le $LIMIT ]
+do
+    if [ $a -eq 4  ]
+    then
+	echo $a
+	echo "bad luck from China"
+    elif [ $a -eq 9 ]
+    then
+	echo $a
+	echo "bad luck from Japan"
+    elif [ $a -eq 17 ]
+    then
+	echo $a
+	echo "bad luck from Italy"
+    else
+	echo $a
+    fi
+
+    (( a++ ))
+done
+exit 0
