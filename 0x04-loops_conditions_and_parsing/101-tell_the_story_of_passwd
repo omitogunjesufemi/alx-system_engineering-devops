@@ -4,6 +4,7 @@
 IFS=":"
 while read -r line
 do
-    read -ar passwd <<< "$line"
+    read -r -a passwd <<< "$line"
+
     echo "The user ${passwd[0]} is part of the ${passwd[3]} gang, lives in ${passwd[5]} and rides ${passwd[6]}. ${passwd[2]}'s place is protected by the passcode ${passwd[1]}, more info about the user here: ${passwd[4]}"
 done < /etc/passwd
