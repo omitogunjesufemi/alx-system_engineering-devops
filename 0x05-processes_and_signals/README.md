@@ -11,3 +11,4 @@ This project helped to understand:
 TASK | DESCRIPTION
 --- | ---
 `0-what-is-my-pid` | Bash script that displays its own PID.
+`1-list_your_processes` | Bash script that displays a list of currently running processes.
