@@ -17,3 +17,4 @@ TASK | DESCRIPTION
 `4-to_infinity_and_beyond` | Bash script that displays To infinity and beyond indefinitely
 `5-dont_stop_me_now` | Bash script that stops `4-to_infinity_and_beyond` process
 `6-stop_me_if_you_can` | Bash script that stops `4-to_infinity_and_beyond` process without `kill` or `killall`
+`7-highlander` | Bash script that displays I am invinciblels! when receiving a SIGTERM signal
