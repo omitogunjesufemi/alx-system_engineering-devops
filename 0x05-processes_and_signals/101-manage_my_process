@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Bash (init) script 101-manage_my_process that manages manage_my_process
+
+if [ "$#" -ne "1" ]
+then
+    echo "Usage: manage_my_process {start|stop|restart}"
+    exit 0
+fi
+
+case "$1" in
+    "start" )
+	nohup ./manage_my_process > /tmp/my_process 2>&1 &
+	pid=$(pgrep -al bash | grep "./manage_my_process" | cut -d " " -f 1)
+	echo "$pid" > /var/run/my_process.pid
+	echo "manage_my_process started"
+	;;
+    "stop" )
+	nohup pkill -15 -f "manage_my_process" > /dev/null 2>&1 &
+	rm /var/run/my_process.pid
+	echo "manage_my_process stopped"
+	;;
+    "restart" )
+	pkill -15 -f "manage_my_process"
+	rm /var/run/my_process.pid
+
+	nohup ./manage_my_process > /tmp/my_process 2>&1 &
+	pid=$(pgrep -al bash | grep "./manage_my_process" | cut -d " " -f 1)
+	echo "$pid" > /var/run/my_process.pid
+	echo "manage_my_process restarted"
+	;;
+    * )
+	echo "Usage: manage_my_process {start|stop|restart}"
+	;;
+esac

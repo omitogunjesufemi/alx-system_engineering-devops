@@ -20,3 +20,5 @@ TASK | DESCRIPTION
 `7-highlander` | Bash script that displays I am invinciblels! when receiving a SIGTERM signal
 `8-beheaded_process` | Bash script that kills the process 7-highlander
 `100-process_and_pid_file` | Determine process and save PID to file
+`manage_my_process` | Bash Script that indefinitely writes I am alive! to the file /tmp/my_process
+`101-manage_my_process` | Bash (init) script 101-manage_my_process that manages manage_my_process
