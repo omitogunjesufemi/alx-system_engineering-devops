@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Determine process and save PID to file
+a=0
+
+while [ "$a" -le "10" ]
+do
+    echo "$$" > /var/run/myscript.pid
+    trap 'echo "Y U no love me?!"' SIGINT
+    trap 'echo "I hate the kill command";
+    rm /var/run/myscript.pid; exit' SIGQUIT SIGTERM
+    echo "To infinity and beyond"
+    sleep 2
+done
+exit 0

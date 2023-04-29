@@ -19,3 +19,4 @@ TASK | DESCRIPTION
 `6-stop_me_if_you_can` | Bash script that stops `4-to_infinity_and_beyond` process without `kill` or `killall`
 `7-highlander` | Bash script that displays I am invinciblels! when receiving a SIGTERM signal
 `8-beheaded_process` | Bash script that kills the process 7-highlander
+`100-process_and_pid_file` | Determine process and save PID to file
