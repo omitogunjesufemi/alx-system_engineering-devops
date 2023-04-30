@@ -20,9 +20,8 @@ case "$1" in
 	echo "manage_my_process stopped"
 	;;
     "restart" )
-	pkill -15 -f "manage_my_process"
+	nohup pkill -15 -f "manage_my_process" > /dev/null 2>&1 &
 	rm /var/run/my_process.pid
-
 	nohup ./manage_my_process > /tmp/my_process 2>&1 &
 	pid=$(pgrep -al bash | grep "./manage_my_process" | cut -d " " -f 1)
 	echo "$pid" > /var/run/my_process.pid
