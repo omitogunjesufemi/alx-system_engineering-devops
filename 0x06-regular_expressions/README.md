@@ -12,3 +12,4 @@ TASK | DESCRIPTION
 `5-beginning_and_end.rb` | Regex matching a string that starts with h ends with n and can have any single character in between
 `6-phone_number.rb` | Regex that matches a 10 digit phone number
 `7-OMG_WHY_ARE_YOU_SHOUTING.rb` | Regex matches capital letters
+`100-textme.rb` | Extracting info from a logfile
