@@ -5,3 +5,4 @@ This project helped understand how to build a regular expression using Oniguruma
 TASK | DESCRIPTION
 --- | ---
 `0-simply_match_school.rb` | A regular expression that matches `School`
+`1-repetition_token_0.rb` | Repetition Token #0

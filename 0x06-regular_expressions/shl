@@ -2,4 +2,5 @@
 touch $1
 chmod +x $1
 echo "#!/usr/bin/env ruby" > $1
+echo "puts ARGV[0].scan(/School/).join" >> $1
 echo "\`$1\` | $2" >> README.md
