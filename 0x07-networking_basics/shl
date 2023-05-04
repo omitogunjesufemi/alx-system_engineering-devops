@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+touch $1
+chmod +x $1
+echo "#!/usr/bin/env bash" > $1
+echo "# $2" >> $1
+echo "\`$1\` | $2" >> README.md
+emacs $1 && shellcheck $1
