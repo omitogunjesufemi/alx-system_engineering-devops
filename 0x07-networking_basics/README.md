@@ -14,3 +14,5 @@ TASK | DESCRIPTION
 `1-types_of_network` | Types of network Questions
 `2-MAC_and_IP_address` | MAC and IP address Questions
 `3-UDP_and_TCP` | UDP and TCP Questions
+`4-TCP_and_UDP_ports` | A Bash script that displays listening ports
+`5-is_the_host_on_the_network` | A Bash script that pings an IP address passed as an argument
