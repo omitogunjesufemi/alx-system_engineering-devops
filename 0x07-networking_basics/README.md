@@ -11,3 +11,4 @@ This project helped to understand:
 TASK | DESCRIPTION
 --- | ---
 `0-OSI_model` | OSI model Questions
+`1-types_of_network` | Types of network Questions
