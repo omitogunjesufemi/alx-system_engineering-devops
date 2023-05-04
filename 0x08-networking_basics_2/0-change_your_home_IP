@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Bash script that configures an Ubuntu server
+cp /etc/hosts ~/temp_hosts
+
+p1=$(cat ~/temp_hosts | grep "localhost")
+if [ "$p1" ]
+then
+    sed -i '/\tlocalhost/c\127.0.0.2\tlocalhost' ~/temp_hosts
+else
+    echo -e "127.0.0.2\t\tlocalhost" >> ~/temp_hosts
+fi
+
+p2=$(cat ~/temp_hosts | grep "facebook")
+if [ "$p2" ]
+then
+    sed -i '/\tfacebook/c\8.8.8.8\tfacebook' ~/temp_hosts
+else
+    echo -e "8.8.8.8\t\tfacebook" >> ~/temp_hosts
+fi
+
+cp ~/temp_hosts /etc/hosts
