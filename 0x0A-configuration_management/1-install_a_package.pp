@@ -1,17 +1,11 @@
 # Installing flask from pip3 using Puppet
 
-package { 'python3-pip':
-  ensure   => 'installed'
-}
-
 package { 'flask':
-  ensure   => 'installed',
+  ensure   => '2.1.0',
   provider => 'pip3',
-  require  => Package['python3-pip']
 }
 
 package { 'werkzeug':
-  ensure   => 'installed',
-  provider => 'pip3',
-  require  => Package['python3-pip']
+  ensure   => '2.1.1',
+  provider => 'pip3'
 }
