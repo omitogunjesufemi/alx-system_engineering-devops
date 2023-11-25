@@ -1,0 +1,7 @@
+# Write a ssh configuration file to use a particular private key, and to
+
+Host *
+IdentityFile ~/.ssh/school
+
+# refuse PasswordAuthentication
+PasswordAuthentication no
