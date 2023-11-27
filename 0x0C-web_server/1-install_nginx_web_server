@@ -16,7 +16,5 @@ sudo chmod -R 755 /var/www
 # Editing the index.html file
 echo "Hello World!" > /var/www/html/index.html
 
-# Creating a symbolic to sites-enable in order to enable the web server
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-
+# Restarting ngnix server to load up changes
 sudo service nginx restart
