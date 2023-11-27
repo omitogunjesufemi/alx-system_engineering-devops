@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Bash script to set up nginx web server
+
+# Installing nginx
+sudo apt-get update
+sudo apt-get install nginx -y
+
+# Adjusting the Firewall
+sudo ufw allow 'Nginx HTTP'
+sudo service nginx start
+
+# Setting permission for the /var/www directory
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+# Editing the index.html file
+echo "Hello World!" > /var/www/html/index.html
+
+# Creating a symbolic to sites-enable in order to enable the web server
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+
+sudo service nginx restart

@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # A Bash script that transfers a file from our client to a server
+# Usage: ./0-transfer_file PATH_TO_FILE 34.207.211.69 ubuntu ~/.ssh/id_rsa
 
 k=0;
 

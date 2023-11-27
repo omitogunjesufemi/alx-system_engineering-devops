@@ -13,3 +13,4 @@ The project consist of the following tasks:
 TASK | DESCRIPTION
 --- | ---
 `0-transfer_file` | A Bash script that transfers a file from our client to a server
+`1-install_nginx_web_server` | Bash script to set up nginx web server
