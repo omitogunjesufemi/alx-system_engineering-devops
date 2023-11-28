@@ -24,7 +24,7 @@ file_line { 'redirection_server':
 }
 
 exec { 'restart nginx':
-  path => '/usr/bin',
+  path    => '/usr/bin',
   command => 'sudo service nginx restart',
   require => [Package['nginx'], File_line['redirection_server']]
 }
