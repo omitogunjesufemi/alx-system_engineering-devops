@@ -12,8 +12,7 @@ file { 'index.html':
   require => Package['nginx']
 }
 
-file_line { "default":
-  path => "/etc/nginx/sites-enabled/default",
-  line => "\tserver_name _;\n \trewrite ^/redirect_me$ http://x.com permanent;\n \trewrite ^/redirect_me/$ http://x.com permanent;",
-  match => "server_name _;"
+exec { 'redirection':
+  path => '/usr/bin/',
+  command => "sudo sed -i 's|^[^#].*server_name.*;|\\tserver_name _;\\n\\trewrite ^/redirect_me$ http://x.com permanent;\\n\\trewrite ^/redirect_me/$ http://x.com permanent;|' /etc/nginx/sites-enabled/default;",
 }
