@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Configure nginx server to redirect a specific to another
+
+# Installing nginx
+sudo apt-get update
+sudo apt-get install nginx -y
+
+# Adjusting the Firewall
+sudo ufw allow 'Nginx HTTP'
+sudo service nginx start
+
+# Setting permission for the /var/www directory
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+# Editing the index.html file
+echo "Hello World!" > /var/www/html/index.html
+
+# Redirecting a specific page
+new_string="server_name _;\n \trewrite ^/redirect_me$ http://x.com permanent;"
+sudo sed -i "s|server_name _;|$new_string|g" /etc/nginx/sites-enabled/default;
+
+# Restarting ngnix server to load up changes
+sudo service nginx restart;
