@@ -12,9 +12,12 @@ echo "Hello World!" | sudo tee /var/www/html/index.html
 new_string="\tserver_name _;\n \trewrite ^/redirect_me/$ http://x.com permanent;\n \trewrite ^/redirect_me/$ http://x.com permanent; "
 sudo sed -i "s|^[^#].*server_name.*;|$new_string|" /etc/nginx/sites-enabled/default;
 
-# Custom 404 page
-sudo sed -i "s|^[^#].*location / {*;|$new_string|" /etc/nginx/sites-enabled/default;
-location / {
+# Creating the 404 error page
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+
+# Directing 404 error to custom page
+rep_str="\terror_page 404 /custom_404.html;\n \tlocation = /custom_404.html {\n \t\troot /usr/share/nginx/html;\n \t\tinternal;"
+sudo sed -i "s|^[^#].*location \/ {$|$rep_str|" /etc/nginx/sites-enabled/default;
 
 # Removing temporary files being saved in the same directory
 # This causes the nginx server to fail, because their are
