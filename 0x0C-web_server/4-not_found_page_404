@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configure nginx server to redirect a specific to another
+# Configure Nginx server to have a custom 404 page
 
 # Installing nginx
 sudo apt-get update -y
@@ -9,8 +9,12 @@ sudo apt-get install nginx -y
 echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Redirecting a specific page
-new_string="\tserver_name _;\n \trewrite ^/redirect_me$ http://x.com permanent;\n \trewrite ^/redirect_me/$ http://x.com permanent; "
+new_string="\tserver_name _;\n \trewrite ^/redirect_me/$ http://x.com permanent;\n \trewrite ^/redirect_me/$ http://x.com permanent; "
 sudo sed -i "s|^[^#].*server_name.*;|$new_string|" /etc/nginx/sites-enabled/default;
+
+# Custom 404 page
+sudo sed -i "s|^[^#].*location / {*;|$new_string|" /etc/nginx/sites-enabled/default;
+location / {
 
 # Removing temporary files being saved in the same directory
 # This causes the nginx server to fail, because their are
