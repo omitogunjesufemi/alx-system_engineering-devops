@@ -17,3 +17,4 @@ TASK | DESCRIPTION
 `2-setup_a_domain_name` | Provide domain name created
 `3-redirection` | Configure nginx server to redirect a specific to another
 `4-not_found_page_404` | Configure Nginx server to have a custom 404 page
+`7-puppet_install_nginx_web_server.pp` | Puppet manifest to configure the nginx server
