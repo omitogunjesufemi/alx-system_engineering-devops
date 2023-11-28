@@ -1,5 +1,4 @@
 # Puppet manifest to configure the nginx server
-
 include stdlib
 
 package { 'nginx':
@@ -12,7 +11,20 @@ file { 'index.html':
   require => Package['nginx']
 }
 
-exec { 'redirection':
-  path    => '/usr/bin/',
-  command => "sudo sed -i 's|^[^#].*server_name.*;|\\tserver_name _;\\n\\trewrite ^/redirect_me$ http://x.com permanent;\\n\\trewrite ^/redirect_me/$ http://x.com permanent;|' /etc/nginx/sites-enabled/default;",
+$str = "        server_name _;
+        rewrite ^/redirect_me$ http:x.com permanent;
+        rewrite ^/redirect_me/$ http:x.com permanent;
+"
+
+file_line { 'redirection_server':
+  path  => '/etc/nginx/sites-enabled/default',
+  line  => $str,
+  match => '^\s*server_name _;.*$',
+  after => '^\s*server_name _;.*$'
+}
+
+exec { 'restart nginx':
+  path => '/usr/bin',
+  command => 'sudo service nginx restart',
+  require => [Package['nginx'], File_line['redirection_server']]
 }
