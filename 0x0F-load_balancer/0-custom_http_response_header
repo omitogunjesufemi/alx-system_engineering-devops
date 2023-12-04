@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# configure web-02 to be identical to web-01
+
+# Installing nginx
+sudo apt-get -y update
+sudo apt-get install -y nginx
+
+# Start nginx
+sudo service nginx start
+
+# Add Custom Header
+new_string="\tserver_name _;\n \tadd_header X-Served-By \"$(hostname)\";"
+sudo sed -i "s|^[^#].*server_name.*;|$new_string|" /etc/nginx/sites-enabled/default;
+
+# Removing temporary files being saved in the same directory
+# This causes the nginx server to fail, because their are
+# two default servers in two different files
+sudo rm -rf /etc/nginx/sites-enabled/default~
+
+# Restarting ngnix server to load up changes
+sudo service nginx restart
