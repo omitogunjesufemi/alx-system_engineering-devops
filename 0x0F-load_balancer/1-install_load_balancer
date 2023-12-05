@@ -18,8 +18,8 @@ frontend lb-frontend
 
 backend lb-backend
 	balance roundrobin
-	server 118886-web-01 54.237.64.177:80 check
-	server 118886-web-02 52.91.136.101:80 check
+	server web-01 54.237.64.177:80 check
+	server web-02 52.91.136.101:80 check
 
 "
 echo "$__config" | sudo tee -a /etc/haproxy/haproxy.cfg
