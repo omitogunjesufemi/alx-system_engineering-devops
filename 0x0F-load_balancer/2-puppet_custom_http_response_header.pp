@@ -5,20 +5,14 @@ package { 'nginx':
   ensure => 'installed'
 }
 
-$str="        server_name _;
-        add_header X-Served-By \"${hostname}\";
-
-"
-
-file_line { 'redirection_server':
+file_line { 'adding header':
   path  => '/etc/nginx/sites-enabled/default',
-  line  => $str,
-  match => '^\s*server_name _;.*$',
-  after => '^\s*server_name _;.*$'
+  line  => 'add_header X-Served-By \"$hostname\"',
+  after => 'listen 80 default server'
 }
 
 exec { 'restart nginx':
   path    => '/usr/bin',
   command => 'sudo service nginx restart',
-  require => [Package['nginx'], File_line['redirection_server']]
+  require => [Package['nginx'], File_line['adding header']]
 }

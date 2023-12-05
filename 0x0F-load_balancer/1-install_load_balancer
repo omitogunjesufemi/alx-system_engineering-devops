@@ -2,10 +2,7 @@
 # Install & configure HAproxy on lb-01 server to send traffic to web-01 & web-02
 
 sudo apt get update -y
-sudo apt get upgrade -y
 # Installing HAProxy
-sudo apt-get install --no-install-recommends software-properties-common -y
-sudo add-apt-repository ppa:vbernat/haproxy-2.8 -y
 sudo apt-get install haproxy=2.8.\* -y
 
 # Enabling HAProxy Script
