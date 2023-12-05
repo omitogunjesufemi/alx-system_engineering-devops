@@ -11,3 +11,4 @@ For this project, you will need to write Bash scripts to automate your work. All
 TASK | DESCRIPTION
 --- | ---
 `0-custom_http_response_header` | Configure web-02 to be identical to web-01
+`1-install_load_balancer` | Install and configure HAproxy on your lb-01 server to send traffice to web-01 and web-02
