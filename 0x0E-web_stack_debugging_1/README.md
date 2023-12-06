@@ -7,3 +7,4 @@ In this debugging series, broken/bugged webstacks will be given to you, the fina
 TASK | DESCRIPTION
 --- | ---
 `0-nginx_likes_port_80` | Fixed Failed to connect to 0 port 80: Connection refused
+`1-debugging_made_short` | Make the fix short and sweet
