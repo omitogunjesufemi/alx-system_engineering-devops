@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 # Fixed Failed to connect to 0 port 80: Connection refused
-sudo apt-get remove --purge nginx* -y
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo service haproxy restart
+sudo service nginx start

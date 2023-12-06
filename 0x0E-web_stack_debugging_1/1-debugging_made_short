@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Make the fix short and sweet
 sudo apt-get remove --purge nginx* -y
+sudo apt install haproxy -y
 sudo service haproxy restart
