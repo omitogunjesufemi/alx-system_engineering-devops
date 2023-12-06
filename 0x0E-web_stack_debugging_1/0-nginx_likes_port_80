@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Fixed Failed to connect to 0 port 80: Connection refused
-service nginx start
+sudo apt install nginx -y
+sudo service nginx start
