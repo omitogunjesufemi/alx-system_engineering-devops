@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 # Fixed Failed to connect to 0 port 80: Connection refused
-sudo apt install nginx -y
-sudo ufw allow 'Nginx HTTP'
 sudo service nginx restart
