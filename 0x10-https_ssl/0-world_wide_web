@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# The subdomain [SUB_DOMAIN] is a[RECORD_TYPE] record and points to[DESTINATION]
+
+domain_func() {
+    if [ -z "$2" ]
+    then
+	sub_domain_list=("www" "lb-01" "web-01" "web-02")
+
+	for sub_domain in ${sub_domain_list[*]}
+	do
+	    RECORD_TYPE=$(dig "$sub_domain.$1" | grep -A1 "ANSWER SECTION" | tail -1 | awk -F' ' '{print $4}')
+	    DESTINATION=$(dig "$sub_domain.$1" | grep -A1 "ANSWER SECTION" | tail -1 | awk -F' ' '{print $5}')
+	    echo "The subdomain $sub_domain is a $RECORD_TYPE record and points to $DESTINATION"
+	done
+    else
+	RECORD_TYPE=$(dig "$2.$1" | grep -A1 "ANSWER SECTION" | tail -1 | awk -F' ' '{print $4}')
+	DESTINATION=$(dig "$2.$1" | grep -A1 "ANSWER SECTION" | tail -1 | awk -F' ' '{print $5}')
+	echo "The subdomain $2 is a $RECORD_TYPE record and points to $DESTINATION"
+    fi
+}
+
+domain_func "$1" "$2"
