@@ -2,4 +2,4 @@
 # Make the fix short and sweet
 sudo service nginx stop
 sudo ln -sfn /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service haproxy restart
+sudo service nginx start
