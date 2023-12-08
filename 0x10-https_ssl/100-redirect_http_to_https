@@ -36,6 +36,7 @@ defaults
 frontend lb-frontend
 	 bind *:80
 	 bind *:443 ssl crt /etc/haproxy/certs/www.jesufemi.tech.pem
+	 redirect scheme https code 301 if !{ ssl_fc }
 	 default_backend lb-backend
 
 backend lb-backend
