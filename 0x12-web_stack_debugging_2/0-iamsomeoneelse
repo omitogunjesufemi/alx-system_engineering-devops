@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Print user name if it exist
+sudo -u "$1" whoami
