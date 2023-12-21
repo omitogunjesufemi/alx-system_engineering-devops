@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Fix the container so that Nginx is running as the nginx user
+sudo sed -i "s|^[^#].*user.*;|user nginx|" /etc/nginx/nginx.conf
+sudo service nginx restart
