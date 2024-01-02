@@ -17,4 +17,5 @@ The project help to understand the following:
 The project consist of the following tasks:
 TASK | DESCRIPTION
 --- | ---
-`0-gather_data_from_an_API.py` | 
+`0-gather_data_from_an_API.py` | Python script that, using this REST API, for a given employee ID, returns information about his/her TODO list progress
+`1-export_to_CSV.py` | Extends task 0 to export data in the CSV format
