@@ -17,3 +17,4 @@ The project help to understand the following:
 The project consist of the following tasks:
 TASK | DESCRIPTION
 --- | ---
+`0-gather_data_from_an_API.py` | 
