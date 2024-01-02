@@ -5,7 +5,7 @@ Extend task 0 to export data into JSON format
 - Format must be:
   { "USER_ID": [ {"username": "USERNAME", "task": "TASK_TITLE",
                "completed": TASK_COMPLETED_STATUS}, {"username": "USERNAME",
-               "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS}, ... ],
+               "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS}, ... ]
    "USER_ID": [ {"username": "USERNAME", "task": "TASK_TITLE",
               "completed": TASK_COMPLETED_STATUS}, {"username": "USERNAME",
               "task": "TASK_TITLE", "completed": TASK_COMPLETED_STATUS}, ... ]}
