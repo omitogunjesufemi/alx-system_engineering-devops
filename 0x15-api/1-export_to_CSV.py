@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     usr_response = requests.get(usr_url)
     usr_json = usr_response.json()
-    usr_name = usr_json[0].get("name")
+    usr_name = usr_json[0].get("username")
 
     usr_todos = f"https://jsonplaceholder.typicode.com/todos/?userId={usr_id}"
     usr_todo_response = requests.get(usr_todos)
