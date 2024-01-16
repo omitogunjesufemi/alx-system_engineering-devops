@@ -64,7 +64,7 @@ def count_words(subreddit, word_list, limit=10, after=None, hot_list={}):
                         hot_list.pop(key)
 
                 hot_list = dict(sorted(hot_list.items(),
-                                       key=lambda x:x[1],
+                                       key=lambda x: x[1],
                                        reverse=True))
                 print(hot_list)
         else:
