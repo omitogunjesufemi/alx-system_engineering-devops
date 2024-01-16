@@ -9,4 +9,5 @@ The project help to understand the following:
 
 The project consist of the following tasks:
 TASK | DESCRIPTION
---- | ---`0-subs.py` | A function that queries the Reddit API and returns the number of subscribers (not active users, total subscribers) for a given subreddit
+--- | ---
+`0-subs.py` | A function that queries the Reddit API and returns the number of subscribers (not active users, total subscribers) for a given subreddit
