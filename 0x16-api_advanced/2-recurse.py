@@ -42,7 +42,8 @@ def recurse(subreddit, limit=10, after=None, hot_list=[]):
 
             if reddit_response.get("data").get("after"):
                 return recurse(subreddit, limit,
-                               after=reddit_response.get("data").get("after"))
+                               after=reddit_response.get("data").get("after"),
+                               hot_list=hot_list)
             else:
                 return hot_list
         else:
