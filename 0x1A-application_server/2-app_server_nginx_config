@@ -1,0 +1,11 @@
+server {
+	listen 80 default_server;
+
+	server_name 127.0.0.1:5000;
+
+	location / {
+		include proxy_params;
+		proxy_pass http://unix:/home/ubuntu/AirBnB_clone_v2/airbnb.sock;
+	}
+
+}
