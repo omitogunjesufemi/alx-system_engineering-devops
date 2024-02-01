@@ -3,3 +3,4 @@ The web infrastructure is already serving web pages via Nginx that was installed
 
 TASK | DESCRIPTION
 ---|---
+`4-reload_gunicorn_no_downtime` | Renew gunicorm workers processors

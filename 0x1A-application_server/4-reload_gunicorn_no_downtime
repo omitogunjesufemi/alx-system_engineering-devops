@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Renew gunicorm workers processors
+pid=$(pgrep gunicorn | head -1);
+kill -QUIT $pid;
