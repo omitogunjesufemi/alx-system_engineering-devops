@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Renew gunicorm workers processors
-pid=$(pgrep gunicorn | head -1);
+pid=$(ps auxf | grep gunicorn | head -1 | awk '{print $2}');
 kill -HUP "$pid";
